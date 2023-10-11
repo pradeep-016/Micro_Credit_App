@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        /* Basic CSS for styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            overflow: hidden; /* Prevents scrolling */
+        }
+
+        /* New gradient background styling */
+        body {
+            background: linear-gradient(to right, #141e30, #2a6c56);
+            background-position: center;
+            background-size: cover;
+            padding-left: 5%;
+            padding-right: 5%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Center the content vertically and horizontally */
+        .d-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Styles for the signup box */
+        .container {
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 2px solid #03f484;
+            background: transparent;
+            color: #575151;
+            outline: none;
+        }
+
+        .container button {
+            background: #03f484;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        /* Back to login link styling */
+        .back-to-login a {
+            color: #03f484;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="container">
+            <h2 class="h3">Sign Up</h2>
+            
+            <!-- Form content here -->
+            <form method="POST">
+                {% csrf_token %}
+                <!-- Form fields here -->
+                <input type="text" name="email" placeholder="Email" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <p class="py-3 back-to-login">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* New gradient background styling */
+body {
+    background: linear-gradient(to right, #141e30, #2a6c56);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Video background styling */
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: blur(10px) brightness(1.2);
+    outline: none;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Forgot password form styling */
+.forgot-password-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 40px;
+    color: #fff;
+}
+
+.forgot-password-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.forgot-password-box .user-box {
+    position: relative;
+}
+
+.forgot-password-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #03f484;
+}
+
+.forgot-password-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.forgot-password-box .user-box input:focus ~ label,
+.forgot-password-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03f484;
+    font-size: 12px;
+}
+
+.forgot-password-box button[type="submit"] {
+    background: #03f484;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Add the glowing animation */
+.forgot-password-box button[type="submit"]:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px hsl(180, 98%, 48%), 0 0 25px #03f4f4, 0 0 50px #03f484, 0 0 100px #03f484;
+    }
+    100% {
+        box-shadow: 0 0 10px hsl(180, 98%, 48%), 0 0 50px #03f4f4, 0 0 100px #03f484, 0 0 200px #03f484;
+    }
+}
+
+/* Back to login link styling (same as login page) */
+.back-to-login {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-login a {
+    color: #03f484;
+    text-decoration: underline;
+    font-weight: bold;
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Micro Credit Loan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #141e30, #2a6c56);
+            padding-left: 5%;
+            padding-right: 5%;
+            position: relative;
+            color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(22, 18, 18, 0.7);
+            z-index: 1000;
+        }
+
+/* styles.css */
+
+/* Navigation styles */
+.topnav {
+    background-color: rgba(22, 18, 18, 0.7);
+    overflow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: #000;
+    padding: 30px 0;
+    color: #fff;
+}
+
+.footer h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+        .hero {
+            padding: 10% 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+            font-size: 24px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-top: 20px;
+            background-color: #04AA6D;
+        }
+
+        .home-page-content {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .home-page-content h2 {
+            font-size: 28px;
+            color: #09bfdf;
+            margin-bottom: 20px;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .benefit {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            margin: 0 10px;
+        }
+
+        .benefit img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit h3 {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .benefit p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .benefit:hover {
+            transform: scale(1.05);
+        }
+
+        .how-it-works {
+            padding-top: 10%;
+            margin-top: 20px;
+            color: #ddd;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .work-content {
+            font-size: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px 0;
+            color: #fff;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .footer h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="{% url 'logout' %}">Logout</a>
+            <a href="{% url 'Loan_Application' %}">New Application</a>
+            <a class="active" href="{% url 'main' %}">Home</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="content">
+            <h1>Welcome to Micro Credit Application</h1>
+            <p>Your Trusted Partner for Quick and Easy Loans</p>
+            <a class="btn" href="{% url 'Loan_Application' %}">Apply Now</a>
+        </div>
+    </section>
+    <section class="home-page-content">
+        <h2>Why Choose Micro Credit?</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <img src="{% static 'images/1.jpg' %}" alt="Fast Approval">
+                <h3>Fast Approval</h3>
+                <p>Get your loan approved quickly and easily.</p>
+            </div>
+            <div class="benefit">
+                <img src="{% static 'images/2.jpg' %}" alt="Low Interest Rates">
+                <h3>Low Interest Rates</h3>
+                <p>Enjoy competitive interest rates on your loans.</p>
+            </div>
+            <div class="benefit">
+                <img src="{% static 'images/3.jpg' %}" alt="Secure Transactions">
+                <h3>Secure Transactions</h3>
+                <p>Your financial information is kept safe and secure.</p>
+            </div>
+        </div>
+    </section>
+    <section class="how-it-works">
+        <h2>How It Works?</h2>
+        <p class="work-content">
+            Microcredit loans are small-scale financial aids, often given to people with limited access to regular banks. They're usually provided by microfinance organizations, and they help individuals, especially those with low incomes, start small businesses or invest in income-generating activities. These loans have flexible repayment terms and often involve borrowers forming groups to support each other. The goal is to empower individuals and communities, reducing poverty and promoting economic growth in underserved areas.
+        </p>
+        <ul>
+            <p class="work-content">
+            Fill out the online application form.<br>
+            Submit the required documents. <br>
+            Wait for approval.<br>
+            Get your loan and start your journey.<br>
+            </p>
+        </ul>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-container about">
+                    <h4>Terms and Conditions</h4>
+                    <p>
+                        These terms and conditions outline the rules and regulations for the use of this website. By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use this website if you do not accept all of the terms and conditions stated on this page.
+                    </p>
+                    <p>
+                        The following terminology applies to these Terms and Conditions, Privacy Statement, and Disclaimer Notice and any or all Agreements: "Client," "You," and "Your" refer to you, the person accessing this website and accepting the Company's terms and conditions. "The Company," "Ourselves," "We," "Our," and "Us," refer to our Company. "Party," "Parties," or "Us," refer to both the Client and ourselves or either the Client or ourselves.
+                    </p>
+                    <p>
+                        All terms refer to the offer, acceptance, and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner, whether by formal meetings of a fixed duration or any other means, for the express purpose of meeting the Client's needs in respect of the provision of the Company's stated services/products, in accordance with and subject to, prevailing law.
+                    </p>
+                    <p>
+                        Any use of the above terminology or other words in the singular, plural, capitalization, and/or he/she or they, are taken as interchangeable and, therefore, as referring to the same.
+                    </p>
+                    <!-- Add more terms and conditions text here -->
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</footer>
+<!-- End of Footer -->
+
+</body>
+</html>
