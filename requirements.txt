@@ -1,0 +1,5 @@
+django
+pyrebas4
+scikit-learn
+numpy
+pandas
