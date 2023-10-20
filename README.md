@@ -15,8 +15,7 @@
 11. [User Dashboard](#user-dashboard)
 12. [Admin Panel](#admin-panel)
 13. [Responsive Design](#responsive-design)
-14. [Contributing](#contributing)
-15. [Contact](#contact)
+14. [Contact](#contact)
 
 ## Introduction
 
@@ -127,20 +126,6 @@ Before you begin, ensure you have met the following requirements:
 ### Responsive Design
 
 - The application is designed to provide an optimal user experience on both desktop and mobile devices.
-
-## Contributing
-
-To contribute to the Micro Credit Application, follow these steps:
-
-1. Fork this repository.
-
-2. Create a branch: `git checkout -b feature/feature-name`
-
-3. Make your changes and commit them: `git commit -m 'Feature: Describe your feature'`
-
-4. Push to the original branch: `git push origin feature/feature-name`
-
-5. Create the pull request.
 
 ## Contact
 
