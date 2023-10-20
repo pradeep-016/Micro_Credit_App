@@ -144,5 +144,5 @@ To contribute to the Micro Credit Application, follow these steps:
 
 ## Contact
 
-If you have questions or feedback, please feel free to contact [Your Name](mailto: pradeep02272002@gmail.com).
+If you have questions or feedback, please feel free to contact [Pradeep L](mailto: pradeep02272002@gmail.com).
 
